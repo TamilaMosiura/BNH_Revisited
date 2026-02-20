@@ -15,7 +15,7 @@ function getComputerChoise() {
     return computerType
 }
 
-function userChoose (userChoice){
+function userChoose(userChoice) {
     const computerChoice = getComputerChoise();
 
     let message = ""
@@ -40,13 +40,13 @@ function userChoose (userChoice){
 }
 
 // I found this solution very helpful
-function makeFirstLetterCapital (str){
+function makeFirstLetterCapital(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 function drawResults(userChoice, computerChoice, message) {
     gamePlayingBlock.hidden = false;
-    
+
     userChoiceBlock.innerText = makeFirstLetterCapital(userChoice);
     compChoiceBlock.innerText = makeFirstLetterCapital(computerChoice);
     messageBlock.innerText = message;

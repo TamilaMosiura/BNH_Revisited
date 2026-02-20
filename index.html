@@ -1,0 +1,77 @@
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="author" content="Tamila Mosiura" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow">
+  <title>Bear, Ninja, Hunter</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <div class="card">
+    <header class="card-header">
+      <h2 class="card-title">Bear, Ninja, Hunter</h2>
+      <p class="card-subtitle">Play against the computer!</p>
+    </header>
+
+    <ul class="rules">
+      <li class="rules-item">The Bear Beats the Hunter.</li>
+      <li class="rules-item">The Hunter beats the Ninja.</li>
+      <li class="rules-item">And the Ninja beats the Bear.</li>
+    </ul>
+
+    <p class="instruction">Click a button below to select your choice.</p>
+
+    <hr class="divider" />
+
+    <div class="choices">
+      <button class="btn btn-choice" onclick="userChoose('bear')">
+        Bear
+      </button>
+      <button class="btn btn-choice" onclick="userChoose('ninja')">
+        Ninja
+      </button>
+      <button class="btn btn-choice" onclick="userChoose('hunter')">
+        Hunter
+      </button>
+    </div>
+
+    <hr class="divider" />
+
+    <div id="game-playing" hidden>
+      <div class="result">
+        <p class="result-line">You chose <span id="user-choice"></span>.</p>
+        <p class="result-line">
+          The computer chose <span id="comp-choice"></span>.
+        </p>
+        <p class="result-line result-line-outcome" id="message"></p>
+      </div>
+
+      <div class="scoreboard">
+        <p class="scoreboard-row">
+          Your Wins: <span class="scoreboard-value" id="user-wins"></span>
+        </p>
+        <p class="scoreboard-row">
+          Computer Wins:
+          <span class="scoreboard-value" id="comp-wins">3</span>
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <div class="play-again">
+        <button class="btn btn-primary" onclick="restart()">
+          Play Again?
+        </button>
+      </div>
+
+      <hr class="divider" />
+    </div>
+  </div>
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
